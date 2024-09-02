@@ -4,6 +4,8 @@ using namespace std;
 
 
 float Plus(float _x, float _y);
+float Minus(float _x, float _y);
+float Divine(float _x, float _y);
 
 
 int main()
@@ -14,7 +16,7 @@ int main()
     cout << "이름 : 이종한";
     
     cout << "이름 : 김유빈";
-    cout << "이름 : 정연욱";
+    cout << "이름 : 정연욱" << endl;
 
 
     cout << "계산기" << endl;
@@ -42,6 +44,7 @@ int main()
     case 3:
         break;
     case 4:
+        z = Divine(x, y);
         break;
     default:
         break;
@@ -71,5 +74,5 @@ float Multi(float _x, float _y)
 float Divine(float _x, float _y)
 {
     //김유빈
-    return 0;
+    return _x / _y;
 }
