@@ -37,6 +37,7 @@ int main()
          z = Plus(x, y);
         break;
     case 2:
+        z = Minus(x, y);
         break;
     case 3:
         break;
@@ -58,7 +59,7 @@ float Plus(float _x, float _y)
 float Minus(float _x, float _y)
 {
     //강범승
-    return 0;
+    return _x - _y;
 }
 
 float Multi(float _x, float _y)
