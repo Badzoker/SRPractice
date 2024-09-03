@@ -42,6 +42,7 @@ int main()
         z = Minus(x, y);
         break;
     case 3:
+        z = Multi(x, y);
         break;
     case 4:
         z = Divine(x, y);
