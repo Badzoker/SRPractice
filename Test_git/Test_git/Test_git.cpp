@@ -68,7 +68,7 @@ float Minus(float _x, float _y)
 float Multi(float _x, float _y)
 {
     //정연욱
-    return 0;
+    return _x * _y;
 }
 
 float Divine(float _x, float _y)
