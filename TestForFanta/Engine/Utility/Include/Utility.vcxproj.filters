@@ -64,6 +64,9 @@
     <Filter Include="06.LightManager\00.Light">
       <UniqueIdentifier>{5edfd975-b6c4-4be6-b674-83b6e4cd9c2b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="04.Component\00.VIBuffer\Bullet2Tex">
+      <UniqueIdentifier>{3e0d5d4d-9b61-4e75-b062-716a6ef48981}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Code\Component.cpp">
@@ -125,6 +128,9 @@
     </ClCompile>
     <ClCompile Include="..\Code\LightManager.cpp">
       <Filter>06.LightManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Code\Bullet2Tex.cpp">
+      <Filter>04.Component\00.VIBuffer\Bullet2Tex</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +196,9 @@
     </ClInclude>
     <ClInclude Include="..\..\Header\LightManager.h">
       <Filter>06.LightManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Bullet2Tex.h">
+      <Filter>04.Component\00.VIBuffer\Bullet2Tex</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

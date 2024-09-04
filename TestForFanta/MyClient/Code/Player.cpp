@@ -3,7 +3,8 @@
 #include "Export_Utility.h"
 #include "Export_System.h"
 
-CPlayer::CPlayer(LPDIRECT3DDEVICE9 pGraphicDev) : Engine::CGameObject(pGraphicDev), m_pVertexPos(nullptr)
+CPlayer::CPlayer(LPDIRECT3DDEVICE9 pGraphicDev) 
+	: Engine::CGameObject(pGraphicDev), m_pVertexPos(nullptr)
 {
 }
 
@@ -113,6 +114,11 @@ void CPlayer::Key_Input(const _float& fTimeDelta)
 	if (GetAsyncKeyState('E'))
 	{
 		m_pTransformCom->Rotation(ROT_Z, D3DXToRadian(120.f * fTimeDelta));
+	}
+	if (Engine::Get_DIKeyState(DIK_SPACE))
+	{
+
+
 	}
 	
 }

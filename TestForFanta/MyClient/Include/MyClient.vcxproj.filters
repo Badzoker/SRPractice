@@ -49,6 +49,9 @@
     <Filter Include="02.GameObject\05.SkyBox">
       <UniqueIdentifier>{fa240a2b-b5ea-4174-bf81-cd3b44819193}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02.GameObject\Bullet2">
+      <UniqueIdentifier>{d1028125-a818-4a5b-bb07-b7cf5ecfbe13}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -99,6 +102,9 @@
     <ClInclude Include="..\Header\SkyBox.h">
       <Filter>02.GameObject\05.SkyBox</Filter>
     </ClInclude>
+    <ClInclude Include="..\Header\Bullet2.h">
+      <Filter>02.GameObject\Bullet2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyClient.cpp">
@@ -136,6 +142,9 @@
     </ClCompile>
     <ClCompile Include="..\Code\SkyBox.cpp">
       <Filter>02.GameObject\05.SkyBox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Code\Bullet2.cpp">
+      <Filter>02.GameObject\Bullet2</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,6 @@
 #pragma once
 #include "GameObject.h"
+#include "Bullet2.h"
 BEGIN(Engine)
 
 class CRcTex;
@@ -8,6 +9,7 @@ class CRcCol;
 class CTransform;
 class CTest;
 class CCalculator;
+
 END
 
 class CPlayer : public Engine::CGameObject

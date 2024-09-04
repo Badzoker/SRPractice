@@ -12,6 +12,7 @@
 
 #include "Texture.h"
 #include "RcTex.h"
+#include"Bullet2Tex.h"
 #include "RcArea.h"
 #include "Test.h"
 #include "Camera.h"
