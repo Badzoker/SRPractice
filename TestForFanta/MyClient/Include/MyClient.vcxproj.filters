@@ -51,10 +51,18 @@
     </Filter>
     <Filter Include="02.GameObject\Bullet1">
       <UniqueIdentifier>{ce52a2fd-372e-4a93-8efa-0ee084a5ba62}</UniqueIdentifier>
+    </Filter>
     <Filter Include="02.GameObject\Bullet4">
       <UniqueIdentifier>{f9c41f50-4293-4898-8685-5816c91602fc}</UniqueIdentifier>
+    </Filter>
     <Filter Include="02.GameObject\Bullet2">
       <UniqueIdentifier>{d1028125-a818-4a5b-bb07-b7cf5ecfbe13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Bullet">
+      <UniqueIdentifier>{cbb9dbd6-de30-4f55-9efc-1c0e61b892d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Bullet\Bullet3">
+      <UniqueIdentifier>{a680d20b-22e0-4f53-bb89-465c710db5a8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -108,17 +116,19 @@
     </ClInclude>
     <ClInclude Include="..\Header\Bullet1.h">
       <Filter>02.GameObject\Bullet1</Filter>
+    </ClInclude>
     <ClInclude Include="..\Header\Bullet4.h">
       <Filter>02.GameObject\Bullet4</Filter>
+    </ClInclude>
     <ClInclude Include="..\Header\Bullet2.h">
       <Filter>02.GameObject\Bullet2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Header\Bullet3.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyClient.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="pch.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="..\Code\MainApp.cpp">
@@ -153,10 +163,18 @@
     </ClCompile>
     <ClCompile Include="..\Code\Bullet1.cpp">
       <Filter>02.GameObject\Bullet1</Filter>
+    </ClCompile>
     <ClCompile Include="..\Code\Bullet4.cpp">
       <Filter>02.GameObject\Bullet4</Filter>
+    </ClCompile>
     <ClCompile Include="..\Code\Bullet2.cpp">
       <Filter>02.GameObject\Bullet2</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>02.GameObject\Bullet\Bullet3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Code\Bullet3.cpp">
+      <Filter>02.GameObject\Bullet\Bullet3</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

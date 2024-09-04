@@ -37,13 +37,48 @@ _int CLayer::Update_Layer(const _float& fTimeDelta)
 {
     _int iResult(0);
 
-    for (auto& pObj : m_mapObject)
+    auto iter = m_mapObject.begin();
+
+    for (; iter != m_mapObject.end();)
     {
-        iResult = pObj.second->Update_GameObject(fTimeDelta);
+        iResult = iter->second->Update_GameObject(fTimeDelta);
+
+        if (iter->second->Get_Dead())
+        {
+            Safe_Release(iter->second);
+            m_mapObject.erase(iter->first);
+
+            iter = m_mapObject.end();
+        }
+        else
+            iter++;
+
+        if (iter == m_mapObject.end())
+        {
+            //iter;
+
+            break;
+        }
 
         if (iResult & 0x80000000)
             return iResult;
     }
+
+    //for (auto& pObj : m_mapObject)
+    //{
+    //    if (pObj.second->Get_Dead())
+    //    {
+    //        Safe_Release(pObj.second);
+    //        m_mapObject.erase(pObj.first);
+    //        
+    //        continue;
+    //    }
+
+    //    iResult = pObj.second->Update_GameObject(fTimeDelta);
+
+    //    if (iResult & 0x80000000)
+    //        return iResult;
+    //}
 
     return iResult;
 }

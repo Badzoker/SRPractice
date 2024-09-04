@@ -6,6 +6,9 @@ BEGIN(Engine)
 
 class ENGINE_DLL CGameObject : public CBase
 {
+public :
+	enum class GAMEOBJECTID { OBJECT_BULLET,  OBJECT_END };
+
 protected:
 	explicit CGameObject(LPDIRECT3DDEVICE9 pGraphicDev);
 	explicit CGameObject(const CGameObject& rhs);
@@ -13,6 +16,8 @@ protected:
 
 public:
 	CComponent* Get_Component(COMPONENTID eID, const _tchar* pComponentTag);
+	bool Get_Dead() { return m_bDead; }
+	GAMEOBJECTID Get_ObjectType() { return m_eGameObjectType; }
 
 public:
 	virtual HRESULT Ready_GameObject();
@@ -30,6 +35,10 @@ private:
 protected:
 	virtual void Free();
 
+protected :
+	bool m_bDead;
+
+	GAMEOBJECTID m_eGameObjectType;
 };
 
 END

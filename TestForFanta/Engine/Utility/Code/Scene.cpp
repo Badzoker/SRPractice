@@ -51,6 +51,35 @@ void CScene::Render_Scene()
         pLayer.second->Render_Layer();
 }
 
+void CScene::Add_GameObject(CGameObject* _pGameObject)
+{
+    CGameObject::GAMEOBJECTID eObjectType = _pGameObject->Get_ObjectType();
+
+    switch (eObjectType)
+    {
+    case CGameObject::GAMEOBJECTID::OBJECT_BULLET :
+    {
+        const _tchar* pLayerTag = L"Layer_GameLogic";
+        auto iter = find_if(m_mapLayer.begin(), m_mapLayer.end(), CTag_Finder(pLayerTag));
+
+        if (iter == m_mapLayer.end())
+            return;
+        
+        const _tchar* pObjTag = L"Bullet";
+
+        iter->second->Add_GameObject(L"Bullet", _pGameObject);
+
+        break;
+    }
+
+    case CGameObject::GAMEOBJECTID::OBJECT_END:
+        break;
+    default :
+        break;
+    }
+
+}
+
 void CScene::Free()
 {
     for_each(m_mapLayer.begin(), m_mapLayer.end(), CDeleteMap());
