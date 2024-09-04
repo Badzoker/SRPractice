@@ -144,7 +144,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\Header\BackGround.h" />
+<<<<<<< HEAD
     <ClInclude Include="..\Header\Bullet1.h" />
+=======
+    <ClInclude Include="..\Header\Bullet4.h" />
+>>>>>>> origin/main
     <ClInclude Include="..\Header\Define.h" />
     <ClInclude Include="..\Header\DynamicCamera.h" />
     <ClInclude Include="..\Header\Loading.h" />
@@ -163,7 +167,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Code\BackGround.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="..\Code\Bullet1.cpp" />
+=======
+    <ClCompile Include="..\Code\Bullet4.cpp" />
+>>>>>>> origin/main
     <ClCompile Include="..\Code\DynamicCamera.cpp" />
     <ClCompile Include="..\Code\Loading.cpp" />
     <ClCompile Include="..\Code\Logo.cpp" />
