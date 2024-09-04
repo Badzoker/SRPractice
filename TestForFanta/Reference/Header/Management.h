@@ -20,6 +20,9 @@ public:
 	void LateUpdate_Scene();
 	void Render_Scene(LPDIRECT3DDEVICE9 pGraphicDev);
 
+public :
+	void Add_GameObject(CGameObject* pGameObject);
+
 private:
 	CScene* m_pScene;
 

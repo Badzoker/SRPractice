@@ -19,6 +19,9 @@ public:
 	virtual void LateUpdate_Scene();
 	virtual void Render_Scene();
 
+public :
+	void Add_GameObject(CGameObject* _pGameObject);
+
 protected:
 	map<const _tchar*, CLayer*> m_mapLayer;
 	LPDIRECT3DDEVICE9 m_pGraphicDev;

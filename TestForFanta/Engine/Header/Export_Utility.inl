@@ -34,6 +34,11 @@ void Render_Scene(LPDIRECT3DDEVICE9 pGraphicDev)
 	CManagement::GetInstance()->Render_Scene(pGraphicDev);
 }
 
+void Add_Object(CGameObject* _pGameObject)
+{
+	CManagement::GetInstance()->Add_GameObject(_pGameObject);
+}
+
 HRESULT Ready_Proto(const _tchar* pComponentTag, CComponent* pComponent)
 {
 	return CComponentManager::GetInstance()->Ready_Proto(pComponentTag, pComponent);

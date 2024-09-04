@@ -35,6 +35,8 @@ _uint CLoading::Loading_Stage()
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_TerrainRcArea", Engine::CRcArea::Create(m_pGraphicDev, VTXCNTX, VTXCNTZ, VTXITV)), E_FAIL);
 	
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_SkyBoxCubeTex", Engine::CCubeTex::Create(m_pGraphicDev)), E_FAIL);
+
+	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_BulletRcTex", Engine::CRcTex::Create(m_pGraphicDev)), E_FAIL);
 	
 	//FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_TerrainTest", Engine::CTest::Create(m_pGraphicDev, L"../Bin/Resource/Texture/Terrain/Height2.bmp")), E_FAIL);
 
@@ -49,6 +51,8 @@ _uint CLoading::Loading_Stage()
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_TerrainTexture", Engine::CTexture::Create(m_pGraphicDev, L"../Bin/Resource/Texture/Terrain/Terrain0.png", TEX_NORMAL)), E_FAIL);
 	
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_TerrainTexture2", Engine::CTexture::Create(m_pGraphicDev, L"../Bin/Resource/Texture/Terrain/Grass_%d.tga", TEX_NORMAL, 2)), E_FAIL);
+
+	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_BulletTexture", Engine::CTexture::Create(m_pGraphicDev, L"../Bin/Resource/Texture/Player1.jpg", TEX_NORMAL)), E_FAIL);
 	
 	lstrcpy(m_szLoading, L"ETC Loading............");
 	//Etc

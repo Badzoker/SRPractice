@@ -3,6 +3,8 @@
 #include "Export_Utility.h"
 #include "Export_System.h"
 
+#include "../Header/Bullet3.h"
+
 CPlayer::CPlayer(LPDIRECT3DDEVICE9 pGraphicDev) : Engine::CGameObject(pGraphicDev), m_pVertexPos(nullptr)
 {
 }
@@ -113,6 +115,16 @@ void CPlayer::Key_Input(const _float& fTimeDelta)
 	if (GetAsyncKeyState('E'))
 	{
 		m_pTransformCom->Rotation(ROT_Z, D3DXToRadian(120.f * fTimeDelta));
+	}
+
+	if (Engine::Get_DIKeyState(DIK_SPACE) & 0x80)
+	{
+		CBullet3* pBullet = CBullet3::Create(m_pGraphicDev);
+		_vec3 vPos;
+		m_pTransformCom->Get_Info(INFO::INFO_POS, &vPos);
+		pBullet->Set_Pos(&vPos);
+		Engine::Add_Object(pBullet);
+		CBullet3::Add_Count();
 	}
 	
 }

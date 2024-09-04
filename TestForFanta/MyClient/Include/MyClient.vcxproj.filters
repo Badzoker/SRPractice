@@ -49,6 +49,12 @@
     <Filter Include="02.GameObject\05.SkyBox">
       <UniqueIdentifier>{fa240a2b-b5ea-4174-bf81-cd3b44819193}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02.GameObject\Bullet">
+      <UniqueIdentifier>{cbb9dbd6-de30-4f55-9efc-1c0e61b892d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Bullet\Bullet3">
+      <UniqueIdentifier>{a680d20b-22e0-4f53-bb89-465c710db5a8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -99,12 +105,12 @@
     <ClInclude Include="..\Header\SkyBox.h">
       <Filter>02.GameObject\05.SkyBox</Filter>
     </ClInclude>
+    <ClInclude Include="..\Header\Bullet3.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyClient.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="pch.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="..\Code\MainApp.cpp">
@@ -136,6 +142,12 @@
     </ClCompile>
     <ClCompile Include="..\Code\SkyBox.cpp">
       <Filter>02.GameObject\05.SkyBox</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>02.GameObject\Bullet\Bullet3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Code\Bullet3.cpp">
+      <Filter>02.GameObject\Bullet\Bullet3</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
