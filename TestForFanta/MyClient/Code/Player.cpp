@@ -114,6 +114,8 @@ void CPlayer::Key_Input(const _float& fTimeDelta)
 	{
 		m_pTransformCom->Rotation(ROT_Z, D3DXToRadian(120.f * fTimeDelta));
 	}
+
+	
 	
 }
 

@@ -29,6 +29,8 @@ _uint CLoading::Loading_Stage()
 
 	//FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_PlayerRcCol", Engine::CRcCol::Create(m_pGraphicDev)), E_FAIL);
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_PlayerRcTex", Engine::CRcTex::Create(m_pGraphicDev)), E_FAIL);
+	//종한 Bullet4 RcTex
+	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_Bullet4RcTex", Engine::CRcTex::Create(m_pGraphicDev)), E_FAIL);
 
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_MonsterTriCol", Engine::CTriCol::Create(m_pGraphicDev)), E_FAIL);
 
@@ -49,6 +51,8 @@ _uint CLoading::Loading_Stage()
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_TerrainTexture", Engine::CTexture::Create(m_pGraphicDev, L"../Bin/Resource/Texture/Terrain/Terrain0.png", TEX_NORMAL)), E_FAIL);
 	
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_TerrainTexture2", Engine::CTexture::Create(m_pGraphicDev, L"../Bin/Resource/Texture/Terrain/Grass_%d.tga", TEX_NORMAL, 2)), E_FAIL);
+	//종한 Bullet4
+	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_Bullet4Texture", Engine::CTexture::Create(m_pGraphicDev, L"../Bin/Resource/Texture/Player1.jpg", TEX_NORMAL)), E_FAIL);
 	
 	lstrcpy(m_szLoading, L"ETC Loading............");
 	//Etc

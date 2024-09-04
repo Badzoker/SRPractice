@@ -7,6 +7,7 @@
 #include "Terrain.h"
 #include "SkyBox.h"
 #include "DynamicCamera.h"
+#include "Bullet4.h"
 
 class CStage : public Engine::CScene
 {
