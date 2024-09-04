@@ -8,6 +8,8 @@
 #include "SkyBox.h"
 #include "DynamicCamera.h"
 
+#include "Bullet1.h"
+
 class CStage : public Engine::CScene
 {
 private:
@@ -25,10 +27,14 @@ private:
 	HRESULT Ready_Layer_Environment(const _tchar* pLayerTag);
 	HRESULT Ready_Layer_GameLogic(const _tchar* pLayerTag);
 	HRESULT Ready_Layer_UI(const _tchar* pLayerTag);
+public:
+	HRESULT Create_Bullet1(const _tchar* pLayerTag);
 
 public:
 	static CStage* Create(LPDIRECT3DDEVICE9 pGraphicDev);
-
+private:
+	CLayer* GameLogic_Layer;
+	_int iClickCount;
 private:
 	virtual void Free();
 };

@@ -33,9 +33,11 @@ _uint CLoading::Loading_Stage()
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_MonsterTriCol", Engine::CTriCol::Create(m_pGraphicDev)), E_FAIL);
 
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_TerrainRcArea", Engine::CRcArea::Create(m_pGraphicDev, VTXCNTX, VTXCNTZ, VTXITV)), E_FAIL);
-	
+
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_SkyBoxCubeTex", Engine::CCubeTex::Create(m_pGraphicDev)), E_FAIL);
-	
+
+	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_Bullet1RcTex", Engine::CRcTex::Create(m_pGraphicDev)), E_FAIL);
+
 	//FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_TerrainTest", Engine::CTest::Create(m_pGraphicDev, L"../Bin/Resource/Texture/Terrain/Height2.bmp")), E_FAIL);
 
 	lstrcpy(m_szLoading, L"Texture Loading............");
@@ -47,15 +49,18 @@ _uint CLoading::Loading_Stage()
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_SkyBoxTexture", Engine::CTexture::Create(m_pGraphicDev, L"../Bin/Resource/Texture/SkyBox/burger%d.dds", TEX_CUBE, 4)), E_FAIL);
 
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_TerrainTexture", Engine::CTexture::Create(m_pGraphicDev, L"../Bin/Resource/Texture/Terrain/Terrain0.png", TEX_NORMAL)), E_FAIL);
-	
+
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_TerrainTexture2", Engine::CTexture::Create(m_pGraphicDev, L"../Bin/Resource/Texture/Terrain/Grass_%d.tga", TEX_NORMAL, 2)), E_FAIL);
-	
+
+	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_Bullet1Texture", Engine::CTexture::Create(m_pGraphicDev, L"../Bin/Resource/Texture/Player1.jpg", TEX_NORMAL)), E_FAIL);
+
+
 	lstrcpy(m_szLoading, L"ETC Loading............");
 	//Etc
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_Transform", Engine::CTransform::Create(m_pGraphicDev)), E_FAIL);
 
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_Calculaotr", Engine::CCalculator::Create(m_pGraphicDev)), E_FAIL);
-	
+
 
 
 	lstrcpy(m_szLoading, L"Loading Complete!!");
@@ -96,7 +101,7 @@ CLoading* CLoading::Create(LPDIRECT3DDEVICE9 pGraphicDev, LOADINGID eID)
 		MSG_BOX("Loading Create Failed");
 		return nullptr;
 	}
-	
+
 	return pLoading;
 }
 
