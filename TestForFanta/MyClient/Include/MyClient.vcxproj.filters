@@ -53,6 +53,8 @@
       <UniqueIdentifier>{ce52a2fd-372e-4a93-8efa-0ee084a5ba62}</UniqueIdentifier>
     <Filter Include="02.GameObject\Bullet4">
       <UniqueIdentifier>{f9c41f50-4293-4898-8685-5816c91602fc}</UniqueIdentifier>
+    <Filter Include="02.GameObject\Bullet2">
+      <UniqueIdentifier>{d1028125-a818-4a5b-bb07-b7cf5ecfbe13}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -108,6 +110,8 @@
       <Filter>02.GameObject\Bullet1</Filter>
     <ClInclude Include="..\Header\Bullet4.h">
       <Filter>02.GameObject\Bullet4</Filter>
+    <ClInclude Include="..\Header\Bullet2.h">
+      <Filter>02.GameObject\Bullet2</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +155,8 @@
       <Filter>02.GameObject\Bullet1</Filter>
     <ClCompile Include="..\Code\Bullet4.cpp">
       <Filter>02.GameObject\Bullet4</Filter>
+    <ClCompile Include="..\Code\Bullet2.cpp">
+      <Filter>02.GameObject\Bullet2</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

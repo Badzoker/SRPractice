@@ -1,24 +1,24 @@
-#include "../../Header/RcTex.h"
+#include "Bullet2Tex.h"
 
-CRcTex::CRcTex()
+CBullet2Tex::CBullet2Tex()
 {
 }
 
-CRcTex::CRcTex(LPDIRECT3DDEVICE9 pGraphicDev) 
+CBullet2Tex::CBullet2Tex(LPDIRECT3DDEVICE9 pGraphicDev)
 	: CVIBuffer(pGraphicDev)
 {
 }
 
-CRcTex::CRcTex(const CRcTex& rhs) 
+CBullet2Tex::CBullet2Tex(const CBullet2Tex& rhs)
 	: CVIBuffer(rhs)
 {
 }
 
-CRcTex::~CRcTex()
+CBullet2Tex::~CBullet2Tex()
 {
 }
 
-HRESULT CRcTex::Ready_Buffer()
+HRESULT CBullet2Tex::Ready_Buffer()
 {
 	m_dwTriangleCount = 2;
 	m_dwVertexCount = 4;
@@ -63,32 +63,32 @@ HRESULT CRcTex::Ready_Buffer()
 	pIndex[1]._2 = 3;
 
 	m_pIndexBuffer->Unlock();
-    return S_OK;
+	return S_OK;
 }
 
-void CRcTex::Render_Buffer()
+void CBullet2Tex::Render_Buffer()
 {
-    CVIBuffer::Render_Buffer();
+	CVIBuffer::Render_Buffer();
 }
 
-CRcTex* CRcTex::Create(LPDIRECT3DDEVICE9 pGraphicDev)
+CBullet2Tex* CBullet2Tex::Create(LPDIRECT3DDEVICE9 pGraphicDev)
 {
-    CRcTex* pRcTex = new CRcTex(pGraphicDev);
-    if (FAILED(pRcTex->Ready_Buffer()))
-    {
-        Safe_Release(pRcTex);
-        MSG_BOX("RcTex Create Failed");
-        return nullptr;
-    }
-    return pRcTex;
+	CBullet2Tex* pBullet2Tex = new CBullet2Tex(pGraphicDev);
+	if (FAILED(pBullet2Tex->Ready_Buffer()))
+	{
+		Safe_Release(pBullet2Tex);
+		MSG_BOX("Bullet2Tex Create Failed");
+		return nullptr;
+	}
+	return pBullet2Tex;
 }
 
-CComponent* CRcTex::Clone()
+CComponent* CBullet2Tex::Clone()
 {
-    return new CRcTex(*this);
+	return new CBullet2Tex(*this);
 }
 
-void CRcTex::Free()
+void CBullet2Tex::Free()
 {
-    CVIBuffer::Free();
+	CVIBuffer::Free();
 }

@@ -90,13 +90,11 @@ HRESULT CStage::Ready_Layer_GameLogic(const _tchar* pLayerTag)
 {
 	GameLogic_Layer = CLayer::Create();
 	NULL_CHECK_RETURN(GameLogic_Layer, E_FAIL);
-	//Engine::CLayer* pLayer = CLayer::Create();
-	//NULL_CHECK_RETURN(pLayer, E_FAIL);
+
+	Engine::CLayer* pLayer = CLayer::Create();
+	NULL_CHECK_RETURN(pLayer, E_FAIL);
 
 	Engine::CGameObject* pGameObject = nullptr;
-
-	//Create_Bullet1(pLayerTag, GameLogic_Layer);
-
 	pGameObject = CPlayer::Create(m_pGraphicDev);
 	NULL_CHECK_RETURN(pGameObject, E_FAIL);
 	FAILED_CHECK_RETURN(GameLogic_Layer->Add_GameObject(L"Player", pGameObject), E_FAIL);
@@ -110,6 +108,10 @@ HRESULT CStage::Ready_Layer_GameLogic(const _tchar* pLayerTag)
 	m_mapLayer.insert({ pLayerTag, GameLogic_Layer });
 
 	//มพวั Bullet4 Create GameObject
+	pGameObject = CBullet2::Create(m_pGraphicDev);
+	NULL_CHECK_RETURN(pGameObject, E_FAIL);
+	FAILED_CHECK_RETURN(pLayer->Add_GameObject(L"Bullet2", pGameObject), E_FAIL);
+
 	pGameObject = CBullet4::Create(m_pGraphicDev);
 	NULL_CHECK_RETURN(pGameObject, E_FAIL);
 	FAILED_CHECK_RETURN(pLayer->Add_GameObject(L"Bullet4", pGameObject), E_FAIL);

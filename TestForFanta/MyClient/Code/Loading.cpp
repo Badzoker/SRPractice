@@ -40,6 +40,8 @@ _uint CLoading::Loading_Stage()
 
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_Bullet1RcTex", Engine::CRcTex::Create(m_pGraphicDev)), E_FAIL);
 
+	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_Bullet2Tex", Engine::CBullet2Tex::Create(m_pGraphicDev)), E_FAIL); 
+	 
 	//FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_TerrainTest", Engine::CTest::Create(m_pGraphicDev, L"../Bin/Resource/Texture/Terrain/Height2.bmp")), E_FAIL);
 
 	lstrcpy(m_szLoading, L"Texture Loading............");
@@ -60,6 +62,7 @@ _uint CLoading::Loading_Stage()
 
 	//มพวั Bullet4
 	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_Bullet4Texture", Engine::CTexture::Create(m_pGraphicDev, L"../Bin/Resource/Texture/Player1.jpg", TEX_NORMAL)), E_FAIL);
+	FAILED_CHECK_RETURN(Engine::Ready_Proto(L"Proto_Bullet2Texture", Engine::CTexture::Create(m_pGraphicDev, L"../Bin/Resource/Texture/Player1.jpg", TEX_NORMAL)), E_FAIL);
 	
 	lstrcpy(m_szLoading, L"ETC Loading............");
 	//Etc
