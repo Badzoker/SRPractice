@@ -13,6 +13,8 @@ protected:
 public:
 	CComponent* Get_Component(COMPONENTID eID, const _tchar* pLayerTag, const _tchar* pGameObjectTag, const _tchar* pComponentTag);
 
+	HRESULT Add_GameObject(const _tchar* pLayerTag, const _tchar* pObjTag, CGameObject* pGameObjcet);
+
 public:
 	virtual HRESULT Ready_Scene();
 	virtual _int Update_Scene(const _float& fTimeDelta);

@@ -14,6 +14,8 @@ private:
 public:
 	CComponent* Get_Component(COMPONENTID eID, const _tchar* pLayerTag, const _tchar* pGameObjectTag, const _tchar* pComponentTag);
 
+	HRESULT Add_GameObject(const _tchar* pLayerTag, const _tchar* pObjTag, CGameObject* pGameObjcet);
+
 	HRESULT Set_Scene(CScene* pScene);
 
 	_int Update_Scene(const _float& fTimeDelta);

@@ -22,8 +22,9 @@ public:
 	virtual void LateUpdate_GameObject();
 	virtual void Render_GameObject();
 
-	void Set_Render_True() { m_bIsRender = true; }
+	_bool Set_Render_True();
 
+	HRESULT Set_Position_Player();
 private:
 	HRESULT Add_Component();
 	HRESULT Bullet_Launch(const _float& fTimeDelta);

@@ -14,6 +14,11 @@ CComponent* Get_Component(COMPONENTID eID, const _tchar* pLayerTag, const _tchar
 	return CManagement::GetInstance()->Get_Component(eID, pLayerTag, pGameObjectTag, pComponentTag);
 }
 
+HRESULT Add_GameObject(const _tchar* pLayerTag, const _tchar* pObjTag, CGameObject* pGameObjcet)
+{
+	return CManagement::GetInstance()->Add_GameObject(pLayerTag, pObjTag, pGameObjcet);
+}
+
 HRESULT Set_Scene(CScene* pScene)
 {
 	return CManagement::GetInstance()->Set_Scene(pScene);

@@ -115,8 +115,41 @@ void CPlayer::Key_Input(const _float& fTimeDelta)
 		m_pTransformCom->Rotation(ROT_Z, D3DXToRadian(120.f * fTimeDelta));
 	}
 
+	if (Engine::Get_DIKeyState(DIK_SPACE) & 0x80)
+	{
+		Launch_Bullet(fTimeDelta);
+	}
 	
-	
+}
+
+HRESULT CPlayer::Launch_Bullet(const _float& fTimeDelta)
+{
+	_int iTemp(0);
+	for (auto& iter : m_BulletList)
+	{
+		if (dynamic_cast<CBullet4*>(iter)->Set_Render_True())
+		{
+			return S_OK;
+		}
+		else
+		{
+			iTemp++;
+		}
+	}
+
+	CGameObject* pGameObject = nullptr;
+
+	wstring str = L"Bullet";
+
+	str += to_wstring(iTemp);
+
+	pGameObject = CBullet4::Create(m_pGraphicDev);
+	NULL_CHECK_RETURN(pGameObject, E_FAIL);
+	FAILED_CHECK_RETURN(Add_GameObject(L"Layer_GameLogic", str.c_str(), pGameObject), E_FAIL);
+
+	m_BulletList.push_back(pGameObject);
+
+	return S_OK;
 }
 
 
@@ -136,5 +169,7 @@ CPlayer* CPlayer::Create(LPDIRECT3DDEVICE9 pGraphicDev)
 void CPlayer::Free()
 {
 	Safe_Delete_Array(m_pVertexPos);
+	for_each(m_BulletList.begin(), m_BulletList.end(), CDeleteObj());
+	m_BulletList.clear();
 	Engine::CGameObject::Free();
 }
